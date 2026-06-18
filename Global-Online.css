@@ -1,0 +1,350 @@
+/* 1. GLOBAL STYLES & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Waxay ka dhigeysaa marka link la riixo inuu si tartiib ah u dego */
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #111;
+    position: relative;
+}
+
+/*  2. HEADER AND NAVIGATION BAR (Flexbox) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1a252f;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar .logo h2 span {
+    color: #e74c3c; /* Midabka cas ee astanta u ah Wararka */
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* 
+3. HOME / HERO SECTION*/
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/1920/1080?news') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    background-color: #e74c3c;
+    padding: 5px 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+/* abovgvvv */
+/* 4. ABOUT SECTION */
+.about-section {
+    background-color: #fff;
+}
+.sub-title {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+.about-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: #555;
+}
+
+/* 5. GRID LAYOUTS (Categories, Team, Testimonials) */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Card-ka caadiga ah ee Qaybaha (Categories) */
+.card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 260px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/*6. TEAM SECTION*/
+.team-section {
+    background-color: #eaeded;
+}
+
+.team-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #1a252f;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+
+/*  7. TESTIMONIALS SECTION*/
+.testimonials-section {
+    background-color: #fff;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-left: 5px solid #e74c3c;
+    border-radius: 4px;
+    width: 45%;
+    text-align: left;
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* 8. GALLERY SECTION */
+.gallery-section {
+    background-color: #eaeded;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    width: 23%;
+    min-width: 220px;
+    height: 200px;
+    background-color: #1a252f;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.img-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(45deg, #1a252f, #34495e);
+    transition: opacity 0.3s;
+}
+
+.img-box:hover {
+    opacity: 0.8;
+}
+
+/* 9. CONTACT SECTION & FORM*/
+.contact-section {
+    background-color: #fff;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/*  10. FOOTER*/
+.footer {
+    background-color: #1a252f;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+/* -----------------------------------------
+   11. RESPONSIVE DESIGN (Media Queries)
+----------------------------------------- */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar nav ul {
+        margin-top: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .review-card {
+        width: 100%;
+    }
+    .gallery-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .navbar nav ul li {
+        margin-left: 0;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .card, .team-card, .gallery-item {
+        width: 100%;
+    }
+}
