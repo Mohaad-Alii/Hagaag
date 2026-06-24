@@ -228,41 +228,81 @@ h2 {
 }
 
 /* 8. GALLERY SECTION */
-.gallery-section {
-    background-color: #eaeded;
+.weekly-view{
+    padding: 60px 8%;
+    background: #fff;
 }
 
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
+.weekly-view h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
-.gallery-item {
-    width: 23%;
-    min-width: 220px;
-    height: 200px;
-    background-color: #1a252f;
-    border-radius: 6px;
+/* Grid */
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.gallery-item{
+    height: 250px;
+    border-radius: 12px;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease;
 }
 
-.img-box {
+.gallery-item:hover{
+    transform: translateY(-8px);
+}
+
+.img-box{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
-    background: linear-gradient(45deg, #1a252f, #34495e);
-    transition: opacity 0.3s;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform .4s ease;
 }
 
-.img-box:hover {
-    opacity: 0.8;
+.gallery-item:hover .img-box{
+    transform: scale(1.08);
+}
+
+/* Images */
+.politics .img-box{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("politic.jpeg");
+}
+
+.economy .img-box{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("economic.jpeg");
+}
+
+.tech .img-box{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("technology.jpeg");
+}
+
+.sports .img-box{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("sports.jpeg");
 }
 
 /* 9. CONTACT SECTION & FORM*/
